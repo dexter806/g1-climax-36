@@ -27,36 +27,90 @@ body{
 }
 
 /* ============================================
+   BRAND STRIPE — hazard-diagonal band, poster-style
+   ============================================ */
+.brand-stripe{
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--vermillion) 0 18px,
+    var(--sumi) 18px 36px
+  );
+}
+
+/* ============================================
    MASTHEAD
    ============================================ */
 .masthead{
+  position: relative;
   background:
-    radial-gradient(ellipse 120% 100% at 50% -20%, rgba(225,65,39,0.25), transparent 60%),
+    radial-gradient(ellipse 120% 100% at 50% -20%, rgba(225,65,39,0.28), transparent 60%),
     var(--sumi);
   border-bottom: 1px solid var(--line-strong);
-  padding: 2.5rem 1.5rem 2rem;
+  padding: 2.75rem 1.5rem 2.1rem;
+  overflow: hidden;
+}
+.masthead::after{
+  /* faint grain / halftone texture for a printed-poster feel */
+  content:"";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(237,231,218,0.05) 1px, transparent 1px);
+  background-size: 4px 4px;
+  pointer-events: none;
 }
 .masthead-inner{
+  position: relative;
   max-width: 1080px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.9rem;
   flex-wrap: wrap;
 }
-.event-badge{
-  width: 84px; height: 84px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  border: 2px solid var(--vermillion);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  background: var(--sumi-raised);
-  box-shadow: 0 0 0 4px rgba(225,65,39,0.12);
-}
-.badge-num{ font-family: var(--font-display); font-size: 2.1rem; line-height: 1; color: var(--vermillion); }
-.badge-label{ font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.08em; text-align:center; color: var(--paper-dim); margin-top: 2px; }
 
+/* Original G1-style mark: bold wordmark on a diagonal-cut red plate,
+   with the tournament number in a broken ring — evokes the tournament's
+   own bold red/black poster energy without copying the real logotype. */
+.event-mark{
+  position: relative;
+  flex-shrink: 0;
+  width: 92px; height: 92px;
+  display: flex; align-items: center; justify-content: center;
+}
+.mark-g1{
+  position: absolute;
+  inset: 0;
+  background: var(--vermillion);
+  clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  letter-spacing: 0.02em;
+  color: var(--sumi);
+  box-shadow: 0 0 0 1px var(--vermillion-deep) inset;
+}
+.mark-ring{
+  position: absolute;
+  bottom: -8px; right: -8px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--sumi);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.eyebrow{
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+}
 .masthead-text h1{
   font-family: var(--font-display);
   font-size: clamp(2.6rem, 6vw, 4.2rem);
@@ -157,6 +211,11 @@ main{ max-width: 1080px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; }
     repeating-linear-gradient(to bottom, transparent 0 7px, rgba(237,231,218,0.05) 7px 8px);
   background-size: 100% 100%;
   overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.match-ticket:hover{
+  border-color: rgba(225,65,39,0.45);
+  box-shadow: 0 0 0 1px rgba(225,65,39,0.15), 0 8px 24px rgba(0,0,0,0.35);
 }
 .match-ticket::before{
   /* perforation notch */
