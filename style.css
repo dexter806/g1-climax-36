@@ -310,28 +310,39 @@ main{ max-width: 1080px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; }
 .result-line strong{ color: var(--gold); font-weight: 600; }
 .result-line.pending{ color: var(--paper-dim); font-style: italic; }
 
-/* star rating widget */
+/* star rating widget — quarter-star precision via slider */
 .rate-row{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
   margin-top: 0.65rem;
 }
-.star-btn{
-  background: none; border: none; cursor: pointer;
-  font-size: 1.1rem; line-height: 1;
-  color: var(--line-strong);
-  padding: 0.1rem;
-  transition: color 0.1s ease, transform 0.1s ease;
+.star-display{
+  position: relative;
+  display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1;
+  letter-spacing: 2px;
 }
-.star-btn:hover{ transform: scale(1.15); }
-.star-btn.filled{ color: var(--gold); }
+.star-back{ color: var(--line-strong); }
+.star-front{
+  position: absolute;
+  top: 0; left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--gold);
+  transition: width 0.1s ease;
+}
+.rate-slider{
+  width: 140px;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
 .rate-avg{
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--paper-dim);
-  margin-left: 0.4rem;
 }
 
 /* ============================================
@@ -401,5 +412,5 @@ main{ max-width: 1080px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; }
 .site-footer p{ font-family: var(--font-mono); font-size: 0.68rem; color: var(--paper-dim); max-width: 50ch; margin: 0 auto; }
 
 @media (prefers-reduced-motion: reduce){
-  .star-btn{ transition: none; }
+  .star-front{ transition: none; }
 }
