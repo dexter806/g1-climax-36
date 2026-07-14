@@ -548,6 +548,7 @@ function renderStandingsTable(block, tbodySelector){
 
 function renderStars(){
   const wrap = document.getElementById("starLeaderboard");
+  if(!wrap) return; // COMMUNITY board is currently hidden from the page
   wrap.innerHTML = "";
   const entries = [];
   NIGHTS.forEach(night => {
