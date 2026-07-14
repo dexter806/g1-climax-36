@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>36th G1 — Fan Tracker</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="event-badge">
+        <span class="badge-num">36</span>
+        <span class="badge-label">TH<br>ANNUAL</span>
+      </div>
+      <div class="masthead-text">
+        <h1>G1 CLIMAX<span class="dot">.</span></h1>
+        <p class="masthead-sub">unofficial fan tracker — blocks, cards &amp; your match stars</p>
+      </div>
+      <div class="masthead-meta">
+        <div class="meta-row"><span>WINNER EARNS</span><strong>IWGP World Title shot</strong></div>
+        <div class="meta-row"><span>FINALS</span><strong>Aug 16 — Ryōgoku</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-view="nights">CARDS</button>
+    <button class="tab" data-view="standings">STANDINGS</button>
+    <button class="tab" data-view="stars">TOP RATED</button>
+  </nav>
+
+  <main>
+
+    <section id="view-nights" class="view active">
+      <div class="night-picker" id="nightPicker"></div>
+      <div class="card-grid" id="cardGrid"></div>
