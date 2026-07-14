@@ -315,6 +315,37 @@ function computeStandings(block){
   return Object.values(table).sort((x,y) => y.pts - x.pts);
 }
 
+/* Looks up a wrestler's current W-L-D / points in their block.
+   Returns null for placeholder semifinal/final names. */
+function getRecord(name){
+  const block = BLOCK_A.includes(name) ? "A" : BLOCK_B.includes(name) ? "B" : null;
+  if(!block) return null;
+  return computeStandings(block).find(r => r.name === name) || null;
+}
+
+function spotlightHTML(name, block, rec){
+  const recText = rec ? `${rec.w}-${rec.l}${rec.d ? "-" + rec.d : ""} &middot; ${rec.pts} PTS` : "record TBD";
+  return `
+    <img src="${avatarDataUri(name, block)}" alt="">
+    <div class="sp-name">${name}</div>
+    <div class="sp-record">${recText}</div>
+  `;
+}
+
+function showSpotlight(m){
+  const l = document.getElementById("spotlightLeft");
+  const r = document.getElementById("spotlightRight");
+  l.innerHTML = spotlightHTML(m.a, m.block, getRecord(m.a));
+  r.innerHTML = spotlightHTML(m.b, m.block, getRecord(m.b));
+  l.classList.add("visible");
+  r.classList.add("visible");
+}
+
+function hideSpotlight(){
+  document.getElementById("spotlightLeft").classList.remove("visible");
+  document.getElementById("spotlightRight").classList.remove("visible");
+}
+
 /* ============================================
    RENDERING
    ============================================ */
@@ -379,17 +410,13 @@ function renderCards(){
     const bout = document.createElement("div");
     bout.className = "bout";
     bout.innerHTML = `
-      <div class="wrestler-wrap left">
-        <img class="wrestler-photo" src="${avatarDataUri(m.a, m.block)}" alt="">
-        <div class="wrestler left ${m.winner===m.a ? 'winner':''}">${m.a}</div>
-      </div>
+      <div class="wrestler left ${m.winner===m.a ? 'winner':''}">${m.a}</div>
       <div class="vs">VS</div>
-      <div class="wrestler-wrap right">
-        <img class="wrestler-photo" src="${avatarDataUri(m.b, m.block)}" alt="">
-        <div class="wrestler right ${m.winner===m.b ? 'winner':''}">${m.b}</div>
-      </div>
+      <div class="wrestler right ${m.winner===m.b ? 'winner':''}">${m.b}</div>
     `;
     card.appendChild(bout);
+    card.addEventListener("mouseenter", () => showSpotlight(m));
+    card.addEventListener("mouseleave", hideSpotlight);
 
     const result = document.createElement("div");
     if(m.winner){
