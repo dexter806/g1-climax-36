@@ -440,16 +440,22 @@ function starRow(id, avg){
   const row = document.createElement("div");
   row.className = "rate-row";
 
-  const display = document.createElement("div");
-  display.className = "star-display";
-  const pct = avg ? (avg / 5) * 100 : 0;
-  display.innerHTML = `
-    <span class="star-back">★★★★★</span>
-    <span class="star-front" style="width:${pct}%">★★★★★</span>
-  `;
-
   const count = ratingCount(id);
   const mine = getMyRating(id);
+  const current = mine ?? avg ?? 0;
+
+  const bar = document.createElement("div");
+  bar.className = "rate-bar";
+  bar.tabIndex = 0;
+  bar.setAttribute("role", "slider");
+  bar.setAttribute("aria-valuemin", "0");
+  bar.setAttribute("aria-valuemax", "5");
+  bar.setAttribute("aria-valuenow", String(current));
+  bar.title = "Click a star to rate, or use arrow keys — snaps to quarter-star precision";
+  bar.innerHTML = `
+    <span class="star-back">★★★★★</span>
+    <span class="star-front" style="width:${(current / 5) * 100}%">★★★★★</span>
+  `;
 
   const label = document.createElement("span");
   label.className = "rate-avg";
@@ -460,29 +466,33 @@ function starRow(id, avg){
   } else if(mine !== null){
     label.textContent = `you: ${mine.toFixed(2)}★ · waiting on others`;
   } else {
-    label.textContent = "be the first to rate it";
+    label.textContent = "click a star to rate it";
   }
 
-  const slider = document.createElement("input");
-  slider.type = "range";
-  slider.className = "rate-slider";
-  slider.min = "0";
-  slider.max = "5";
-  slider.step = "0.25";
-  slider.value = mine ?? avg ?? 0;
-  slider.title = "Drag to rate — quarter-star precision";
+  const front = bar.querySelector(".star-front");
+  function setFill(val){ front.style.width = `${(val / 5) * 100}%`; }
+  function revert(){ setFill(current); }
+  function valueFromEvent(e){
+    const rect = bar.getBoundingClientRect();
+    const clientX = e.clientX;
+    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    return Math.round((ratio * 5) / 0.25) * 0.25;
+  }
 
-  slider.addEventListener("input", () => {
-    const val = parseFloat(slider.value);
-    display.querySelector(".star-front").style.width = `${(val / 5) * 100}%`;
-    label.textContent = `${val.toFixed(2)}★ (your pick)`;
-  });
-  slider.addEventListener("change", () => {
-    rateMatch(id, parseFloat(slider.value));
+  bar.addEventListener("pointermove", (e) => setFill(valueFromEvent(e)));
+  bar.addEventListener("pointerleave", revert);
+  bar.addEventListener("click", (e) => rateMatch(id, valueFromEvent(e)));
+  bar.addEventListener("keydown", (e) => {
+    if(e.key === "ArrowRight" || e.key === "ArrowUp"){
+      e.preventDefault();
+      rateMatch(id, Math.min(5, current + 0.25));
+    } else if(e.key === "ArrowLeft" || e.key === "ArrowDown"){
+      e.preventDefault();
+      rateMatch(id, Math.max(0, current - 0.25));
+    }
   });
 
-  row.appendChild(display);
-  row.appendChild(slider);
+  row.appendChild(bar);
   row.appendChild(label);
   return row;
 }
