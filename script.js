@@ -579,6 +579,7 @@ function renderStars(){
 
 function renderMyStars(){
   const wrap = document.getElementById("myLeaderboard");
+  if(!wrap) return;
   wrap.innerHTML = "";
   const entries = [];
   NIGHTS.forEach(night => {
@@ -589,12 +590,13 @@ function renderMyStars(){
     });
   });
   entries.sort((x,y) => y.mine - x.mine);
+  const top = entries.slice(0, 10);
 
-  if(!entries.length){
+  if(!top.length){
     wrap.innerHTML = `<div class="empty-state">You haven't rated anything yet — go star some matches on the CARDS tab.</div>`;
     return;
   }
-  entries.forEach((e, i) => {
+  top.forEach((e, i) => {
     const row = document.createElement("div");
     row.className = "leader-row";
     row.innerHTML = `
@@ -602,6 +604,50 @@ function renderMyStars(){
       <span class="leader-bout">${e.a} vs ${e.b}</span>
       <span class="leader-meta">${e.night}</span>
       <span class="leader-avg">${e.mine.toFixed(2)}★</span>
+    `;
+    wrap.appendChild(row);
+  });
+}
+
+/* Ranks wrestlers by the average of YOUR ratings across every match of
+   theirs you've rated. e.g. 8 matches you rated 4★ + 2 matches at 5★
+   = (8*4 + 2*5) / 10 = 4.2★ for that wrestler. */
+function renderWrestlerRanking(){
+  const wrap = document.getElementById("wrestlerLeaderboard");
+  if(!wrap) return;
+  wrap.innerHTML = "";
+
+  const tally = {}; // name -> { total, count }
+  NIGHTS.forEach(night => {
+    night.matches.forEach((m, i) => {
+      const id = matchId(night.id, i);
+      const mine = getMyRating(id);
+      if(mine === null) return;
+      [m.a, m.b].forEach(name => {
+        if(!tally[name]) tally[name] = { total: 0, count: 0 };
+        tally[name].total += mine;
+        tally[name].count += 1;
+      });
+    });
+  });
+
+  const entries = Object.entries(tally).map(([name, { total, count }]) => ({
+    name, count, avg: total / count
+  }));
+  entries.sort((x, y) => y.avg - x.avg || y.count - x.count);
+
+  if(!entries.length){
+    wrap.innerHTML = `<div class="empty-state">Rate some matches to build wrestler rankings.</div>`;
+    return;
+  }
+  entries.forEach((e, i) => {
+    const row = document.createElement("div");
+    row.className = "leader-row";
+    row.innerHTML = `
+      <span class="leader-rank">${i+1}</span>
+      <span class="leader-bout">${e.name}</span>
+      <span class="leader-meta">${e.count} rated match${e.count === 1 ? "" : "es"}</span>
+      <span class="leader-avg">${e.avg.toFixed(2)}★</span>
     `;
     wrap.appendChild(row);
   });
@@ -615,6 +661,7 @@ function render(){
   renderStandingsTable("B", "#blockB");
   renderStars();
   renderMyStars();
+  renderWrestlerRanking();
 }
 
 document.querySelectorAll(".tab").forEach(tab => {
