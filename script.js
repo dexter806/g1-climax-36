@@ -30,12 +30,12 @@ const NIGHTS = [
     label: "N2 · Jul 18",
     venue: "Sapporo, Hokkaido",
     matches: [
-      { block: "A", a: "Konosuke Takeshita", b: "Jake Lee",       winner: null },
-      { block: "A", a: "Hirooki Goto",       b: "Yota Tsuji",      winner: null },
-      { block: "A", a: "Boltin Oleg",        b: "Yuto-Ice",        winner: null },
-      { block: "A", a: "Great-O-Khan",       b: "SANADA",          winner: null },
-      { block: "A", a: "Shingo Takagi",      b: "Ryohei Oiwa",     winner: null },
-      { block: "B", a: "Gabe Kidd",          b: "Drilla Moloney",  winner: null },
+      { block: "A", a: "Konosuke Takeshita", b: "Jake Lee",       winner: "Konosuke Takeshita", method: "Raging Fire",                    time: "8:51" },
+      { block: "A", a: "Hirooki Goto",       b: "Yota Tsuji",      winner: "Hirooki Goto",       method: "Goto Revolution",                time: "22:35" },
+      { block: "A", a: "Boltin Oleg",        b: "Yuto-Ice",        winner: "Boltin Oleg",        method: "Referee Stoppage (powerbomb)",   time: "15:01" },
+      { block: "A", a: "Great-O-Khan",       b: "SANADA",          winner: "Great-O-Khan",       method: "Countout",                       time: "11:10" },
+      { block: "A", a: "Shingo Takagi",      b: "Ryohei Oiwa",     winner: "Shingo Takagi",      method: "Burning Dragon",                 time: "16:37" },
+      { block: "B", a: "Gabe Kidd",          b: "Drilla Moloney",  winner: "Drilla Moloney",     method: "Drilla Killa",                   time: "15:46" },
     ]
   },
   {
