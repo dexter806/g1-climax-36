@@ -270,6 +270,7 @@ const OUT_WRESTLERS = ["Shota Umino"];
    ============================================ */
 const C_BLOCK_WINS = [
   { name: "Hartley Jackson", night: "N2 \u00b7 Jul 18" },
+  { name: "Hartley Jackson", night: "N3 \u00b7 Jul 19" }
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
