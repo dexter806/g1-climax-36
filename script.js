@@ -74,9 +74,7 @@ const NIGHTS = [
       { block: "B", a: "Aaron Wolf",      b: "Gabe Kidd",       winner: "Gabe Kidd",      method:"Drill A Hole Piledriver",  time:"9:51"   },
       { block: "B", a: "HENARE",          b: "OSKAR",           winner: "HENARE",         method:"Henare Bomb",              time:"11:46"  }, 
       { block: "B", a: "Yuya Uemura",     b: "Drilla Moloney",  winner: "Drilla Moloney", method:"Drilla Killa",             time:"17:48"  },
-      { block: "B", a: "Zack Sabre Jr",   b: "Callum Newman",   winner: "Callum Newman".  method:"Rollup",                   time:"20:11"  },
-      
-      
+      { block: "B", a: "Zack Sabre Jr",   b: "Callum Newman",   winner: "Callum Newman".  method:"Rollup",                   time:"20:11"  },  
     ]
   },
   {
@@ -279,7 +277,7 @@ const C_BLOCK_WINS = [
   { name: "Jacob Austin Young",  night: "N5 \u00b7 Jul 22" },
   { name: "Toru Yano",           night: "N5 \u00b7 Jul 22" },
   { name: "Hartley Jackson",     night: "N5 \u00b7 Jul 22" },
-  { name: "Taiji Ishimori",      night: "N5 \u00b7 Jul 22" },
+  { name: "Taiji Ishimori",      night: "N5 \u00b7 Jul 22" }
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
