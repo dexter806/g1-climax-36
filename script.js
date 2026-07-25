@@ -83,11 +83,11 @@ const NIGHTS = [
     label: "N6 · Jul 25",
     venue: "Ota City Gymnasium, Tokyo",
     matches: [
-      { block: "A", a: "Konosuke Takeshita", b: "Boltin Oleg",    winner: null },
-      { block: "A", a: "Hirooki Goto",       b: "Great-O-Khan",   winner: null },
-      { block: "A", a: "Yota Tsuji",         b: "Shingo Takagi",  winner: null },
-      { block: "A", a: "Jake Lee",           b: "SANADA",         winner: null },
-      { block: "A", a: "Yuto-Ice",           b: "Ryohei Oiwa",    winner: null },
+      { block: "A", a: "Hirooki Goto",       b: "Great-O-Khan",   winner: "Great-O-Khan",       method:"Eliminator",   time:"10:42"  },
+      { block: "A", a: "Jake Lee",           b: "SANADA",         winner: "SANADA",             method:"Count Out",    time: "13:30 },
+      { block: "A", a: "Konosuke Takeshita", b: "Boltin Oleg",    winner: "Konosuke Takeshita", method: "Ragong Fire", time:"14:20" },
+      { block: "A", a: "Yuto-Ice",           b: "Ryohei Oiwa",    winner: "Yuto-Ice",           method:"Cruella",      time: "15:18: },
+      { block: "A", a: "Yota Tsuji",         b: "Shingo Takagi",  winner: "Yota Tsuji"          method:"Fire Blaster"  time:"24:12" },
     ]
   },
   {
