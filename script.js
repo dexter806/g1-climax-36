@@ -97,10 +97,10 @@ const NIGHTS = [
     venue: "Ebara Wave Arena, Ota, Tokyo",
     matches: [
       { block: "B", a: "Shota Umino",     b: "Yuya Uemura",     winner: "Yuya Uemura",     method: "Forfeit" },
+      { block: "B", a: "Aaron Wolf",      b: "OSKAR",           winner: null },
+      { block: "B", a: "HENARE",          b: "Ren Narita",      winner: null },
       { block: "B", a: "Callum Newman",   b: "Drilla Moloney",  winner: null },
       { block: "B", a: "Zack Sabre Jr",   b: "Gabe Kidd",       winner: null },
-      { block: "B", a: "HENARE",          b: "Ren Narita",      winner: null },
-      { block: "B", a: "Aaron Wolf",      b: "OSKAR",           winner: null },
     ]
   },
   {
@@ -109,11 +109,11 @@ const NIGHTS = [
     label: "N8 · Jul 29",
     venue: "Yamato University Arena, Osaka",
     matches: [
+      { block: "A", a: "Boltin Oleg",        b: "Jake Lee",       winner: null },
+      { block: "A", a: "SANADA",             b: "Ryohei Oiwa",    winner: null },
       { block: "A", a: "Konosuke Takeshita", b: "Great-O-Khan",   winner: null },
       { block: "A", a: "Hirooki Goto",       b: "Shingo Takagi",  winner: null },
-      { block: "A", a: "Boltin Oleg",        b: "Jake Lee",       winner: null },
       { block: "A", a: "Yota Tsuji",         b: "Yuto-Ice",       winner: null },
-      { block: "A", a: "SANADA",             b: "Ryohei Oiwa",    winner: null },
     ]
   },
   {
@@ -123,11 +123,11 @@ const NIGHTS = [
     venue: "Takamatsu City Gymnasium, Kagawa",
     matches: [
       { block: "B", a: "Shota Umino",     b: "HENARE",          winner: "HENARE",     method: "Forfeit"},
-      { block: "B", a: "Yuya Uemura",     b: "Aaron Wolf",      winner: null },
+      { block: "B", a: "Drilla Moloney",  b: "OSKAR",           winner: null },
       { block: "B", a: "Zack Sabre Jr",   b: "Ren Narita",      winner: null },
       { block: "B", a: "Callum Newman",   b: "Gabe Kidd",       winner: null },
-      { block: "B", a: "Drilla Moloney",  b: "OSKAR",           winner: null },
-    ]
+      { block: "B", a: "Yuya Uemura",     b: "Aaron Wolf",      winner: null },
+      ]
   },
   {
     id: "night10",
@@ -137,9 +137,10 @@ const NIGHTS = [
     matches: [
       { block: "A", a: "Hirooki Goto",       b: "Konosuke Takeshita", winner: null },
       { block: "A", a: "Boltin Oleg",        b: "SANADA",             winner: null },
-      { block: "A", a: "Shingo Takagi",      b: "Great-O-Khan",       winner: null },
       { block: "A", a: "Yuto-Ice",           b: "Jake Lee",           winner: null },
+      { block: "A", a: "Shingo Takagi",      b: "Great-O-Khan",       winner: null },
       { block: "A", a: "Yota Tsuji",         b: "Ryohei Oiwa",        winner: null },
+      { block: "A", a: "Hirooki Goto",       b: "Konosuke Takeshita", winner: null },
     ]
   },
   {
@@ -149,10 +150,10 @@ const NIGHTS = [
     venue: "Japan Tour",
     matches: [
       { block: "B", a: "Shota Umino",     b: "Callum Newman",   winner: "Callum Newman",     method: "Forfeit" },
+      { block: "B", a: "Zack Sabre Jr",   b: "OSKAR",           winner: null },
+      { block: "B", a: "Aaron Wolf",      b: "Drilla Moloney",  winner: null },
       { block: "B", a: "Yuya Uemura",     b: "Ren Narita",      winner: null },
       { block: "B", a: "Gabe Kidd",       b: "HENARE",          winner: null },
-      { block: "B", a: "Aaron Wolf",      b: "Drilla Moloney",  winner: null },
-      { block: "B", a: "Zack Sabre Jr",   b: "OSKAR",           winner: null },
     ]
   },
   {
