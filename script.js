@@ -98,7 +98,7 @@ const NIGHTS = [
     matches: [
       { block: "B", a: "Shota Umino",     b: "Yuya Uemura",     winner: "Yuya Uemura",     method: "Forfeit" },
       { block: "B", a: "Aaron Wolf",      b: "OSKAR",           winner: "OSKAR",           method: "Alptraum",       time: "9:50" },
-      { block: "B", a: "HENARE",          b: "Ren Narita",      winner: "HENARE",          method: "HENARE Bomb",    time: "10:59 },
+      { block: "B", a: "HENARE",          b: "Ren Narita",      winner: "HENARE",          method: "HENARE Bomb",    time: "10:59" },
       { block: "B", a: "Callum Newman",   b: "Drilla Moloney",  winner: "Drilla Moloney",  method: "Drilla Killa",   time: "14:12" },
       { block: "B", a: "Zack Sabre Jr",   b: "Gabe Kidd",       winner: "Gabe Kidd",       method: "Piledriver",     time: "25:47" },
     ]
