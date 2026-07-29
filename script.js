@@ -109,11 +109,11 @@ const NIGHTS = [
     label: "N8 · Jul 29",
     venue: "Yamato University Arena, Osaka",
     matches: [
-      { block: "A", a: "Boltin Oleg",        b: "Jake Lee",       winner: "Boltin Oleg",        method: "Kamikaze",           time:"10:18" },
+      { block: "A", a: "Boltin Oleg",        b: "Jake Lee",       winner: "Boltin Oleg",        method: "Kamikaze",           time:"10:18"  },
       { block: "A", a: "SANADA",             b: "Ryohei Oiwa",    winner: "Ryohei Oiwa",        method: "Big Lock",           time: "11:48" },
       { block: "A", a: "Konosuke Takeshita", b: "Great-O-Khan",   winner: "Konosuke Takeshita", method: " ",                  time: "14:36" },
       { block: "A", a: "Hirooki Goto",       b: "Shingo Takagi",  winner: "Shingo Takagi",      method: "Last of the Dragon", time: "16:40" },
-      { block: "A", a: "Yota Tsuji",         b: "Yuto-Ice",       winner: "Yota Tsuji",         method: "KO (Fire Blaster) }, time: "26:08"
+      { block: "A", a: "Yota Tsuji",         b: "Yuto-Ice",       winner: "Yota Tsuji",         method: "KO (Fire Blaster) }, time: "26:08" },
     ]
   },
   {
