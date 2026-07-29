@@ -113,7 +113,7 @@ const NIGHTS = [
       { block: "A", a: "SANADA",             b: "Ryohei Oiwa",    winner: "Ryohei Oiwa",        method: "Big Lock",           time: "11:48" },
       { block: "A", a: "Konosuke Takeshita", b: "Great-O-Khan",   winner: "Konosuke Takeshita", method: " ",                  time: "14:36" },
       { block: "A", a: "Hirooki Goto",       b: "Shingo Takagi",  winner: "Shingo Takagi",      method: "Last of the Dragon", time: "16:40" },
-      { block: "A", a: "Yota Tsuji",         b: "Yuto-Ice",       winner: "Yota Tsuji",         method: "KO (Fire Blaster) }, time: "26:08" },
+      { block: "A", a: "Yota Tsuji",         b: "Yuto-Ice",       winner: "Yota Tsuji",         method: "KO - Fire Blaster",  time: "26:08" },
     ]
   },
   {
@@ -283,7 +283,7 @@ const C_BLOCK_WINS = [
   { name: "Hartley Jackson",     night: "N7 \u00b7 Jul 26" },
   { name: "Taiji Ishimori",      night: "N7 \u00b7 Jul 26" },
   { name: "Hartley Jackson",     night: "N8 \u00b7 Jul 28" },
-  { name: "Jacob Austin Young",  night: "N8 \u00b7 Jul 28" }
+  { name: "Jacob Austin Young",  night: "N8 \u00b7 Jul 28" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
