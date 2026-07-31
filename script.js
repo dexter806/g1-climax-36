@@ -122,11 +122,11 @@ const NIGHTS = [
     label: "N9 · Jul 31",
     venue: "Takamatsu City Gymnasium, Kagawa",
     matches: [
-      { block: "B", a: "Shota Umino",     b: "HENARE",          winner: "HENARE",     method: "Forfeit"},
-      { block: "B", a: "Drilla Moloney",  b: "OSKAR",           winner: null },
-      { block: "B", a: "Zack Sabre Jr",   b: "Ren Narita",      winner: null },
-      { block: "B", a: "Callum Newman",   b: "Gabe Kidd",       winner: null },
-      { block: "B", a: "Yuya Uemura",     b: "Aaron Wolf",      winner: null },
+      { block: "B", a: "Shota Umino",     b: "HENARE",          winner: "HENARE",        method: "Forfeit"},
+      { block: "B", a: "Drilla Moloney",  b: "OSKAR",           winner: "OSKAR",         method: "Referee Stoppage (Alptraum),  time: "10:40"},
+      { block: "B", a: "Zack Sabre Jr",   b: "Ren Narita",      winner: "Ren Narita",    method: "Schoolboy",                   time: "2:45" },
+      { block: "B", a: "Callum Newman",   b: "Gabe Kidd",       winner: "Callum Newman", method: "Insdide Cradle",              time: "12:18" },
+      { block: "B", a: "Yuya Uemura",     b: "Aaron Wolf",      winner: "Yuya Uemura",   method: "Lion's Shiner",               time: "19:20" },
       ]
   },
   {
@@ -284,6 +284,10 @@ const C_BLOCK_WINS = [
   { name: "Taiji Ishimori",      night: "N7 \u00b7 Jul 26" },
   { name: "Hartley Jackson",     night: "N8 \u00b7 Jul 28" },
   { name: "Jacob Austin Young",  night: "N8 \u00b7 Jul 28" },
+  { name: "Toru Yano",           night: "N9 \u00b7 Jul 31" },
+  { name: "Kanemaru",            night: "N9 \u00b7 Jul 31" },
+  { name: "Hartley Jackson",     night: "N9 \u00b7 Jul 31" },
+  { name: "Jacob Austin Young",  night: "N9 \u00b7 Jul 31" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
