@@ -123,7 +123,7 @@ const NIGHTS = [
     venue: "Takamatsu City Gymnasium, Kagawa",
     matches: [
       { block: "B", a: "Shota Umino",     b: "HENARE",          winner: "HENARE",        method: "Forfeit"},
-      { block: "B", a: "Drilla Moloney",  b: "OSKAR",           winner: "OSKAR",         method: "Referee Stoppage - Alptraum,  time: "10:40"},
+      { block: "B", a: "Drilla Moloney",  b: "OSKAR",           winner: "OSKAR",         method: "Referee Stoppage - Alptraum", time: "10:40"},
       { block: "B", a: "Zack Sabre Jr",   b: "Ren Narita",      winner: "Ren Narita",    method: "Schoolboy",                   time: "2:45" },
       { block: "B", a: "Callum Newman",   b: "Gabe Kidd",       winner: "Callum Newman", method: "Insdide Cradle",              time: "12:18" },
       { block: "B", a: "Yuya Uemura",     b: "Aaron Wolf",      winner: "Yuya Uemura",   method: "Lion's Shiner",               time: "19:20" },
