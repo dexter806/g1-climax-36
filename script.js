@@ -135,12 +135,11 @@ const NIGHTS = [
     label: "N10 · Aug 1",
     venue: "Sun Plaza Hall, Hiroshima",
     matches: [
-      { block: "A", a: "Hirooki Goto",       b: "Konosuke Takeshita", winner: null },
-      { block: "A", a: "Boltin Oleg",        b: "SANADA",             winner: null },
-      { block: "A", a: "Yuto-Ice",           b: "Jake Lee",           winner: null },
-      { block: "A", a: "Shingo Takagi",      b: "Great-O-Khan",       winner: null },
-      { block: "A", a: "Yota Tsuji",         b: "Ryohei Oiwa",        winner: null },
-      { block: "A", a: "Hirooki Goto",       b: "Konosuke Takeshita", winner: null },
+      { block: "A", a: "Boltin Oleg",        b: "SANADA",             winner: "Boltin Oleg",         method: "Kamikaza",           time: "1:30" },
+      { block: "A", a: "Yuto-Ice",           b: "Jake Lee",           winner: "Yuto-Ice",            method: "Cruella",            time: "10:37" },
+      { block: "A", a: "Shingo Takagi",      b: "Great-O-Khan",       winner: "Shingo Takagi",       method: "Last of the Dragon", time: "9:56" },
+      { block: "A", a: "Yota Tsuji",         b: "Ryohei Oiwa",        winner: "Yota Tsuji",          method: "Fire Blaster",       time: "19:37" },
+      { block: "A", a: "Hirooki Goto",       b: "Konosuke Takeshita", winner: "Konosuke Takeshita",  method: "Raging Fire",        time: "18:04" },
     ]
   },
   {
@@ -288,6 +287,8 @@ const C_BLOCK_WINS = [
   { name: "Kanemaru",            night: "N9 \u00b7 Jul 31" },
   { name: "Hartley Jackson",     night: "N9 \u00b7 Jul 31" },
   { name: "Jacob Austin Young",  night: "N9 \u00b7 Jul 31" },
+  { name: "Hartley Jackson",     night: "N10 \u00b7 Aug 1" },
+  { name: "Daiki Nagai",         night: "N10 \u00b7 Aug 1" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
