@@ -161,11 +161,11 @@ const NIGHTS = [
     label: "N12 · Aug 6",
     venue: "Japan Tour",
     matches: [
-      { block: "A", a: "Konosuke Takeshita", b: "Shingo Takagi",  winner: null },
-      { block: "A", a: "Yota Tsuji",         b: "Boltin Oleg",    winner: null },
-      { block: "A", a: "Jake Lee",           b: "Great-O-Khan",   winner: null },
-      { block: "A", a: "Yuto-Ice",           b: "SANADA",         winner: null },
-      { block: "A", a: "Hirooki Goto",       b: "Ryohei Oiwa",    winner: null },
+      { block: "A", a: "Yuto-Ice",           b: "SANADA",         winner: "SANADA",         method: "KO",                 time:"8:10" },
+      { block: "A", a: "Jake Lee",           b: "Great-O-Khan",   winner: "Jake Lee",       method: "DQ",                 time: "1:47" },
+      { block: "A", a: "Hirooki Goto",       b: "Ryohei Oiwa",    winner: "Ryohei Oiwa",    method: "Big Lock",           time:"8:51" },
+      { block: "A", a: "Konosuke Takeshita", b: "Shingo Takagi",  winner: "Shingo Takagi",  method: "Last of the Dragon", time:"19:44" },
+      { block: "A", a: "Yota Tsuji",         b: "Boltin Oleg",    winner: "Boltin Oleg",    method: "Last Kamikaze",      time:"24:35"},
     ]
   },
   {
@@ -289,9 +289,12 @@ const C_BLOCK_WINS = [
   { name: "Jacob Austin Young",  night: "N9 \u00b7 Jul 31" },
   { name: "Hartley Jackson",     night: "N10 \u00b7 Aug 1" },
   { name: "Daiki Nagai",         night: "N10 \u00b7 Aug 1" },
- { name: "Toru Yano",            night: "N11 \u00b7 Aug 2" },
+  { name: "Toru Yano",           night: "N11 \u00b7 Aug 2" },
   { name: "Kanemaru",            night: "N11 \u00b7 Aug 2" },
   { name: "Hartley Jackson",     night: "N11 \u00b7 Aug 2" },
+  { name: "Jacob Austin Young",  night: "N12 \u00b7 Aug 6" },
+  { name: "Zane Jay",            night: "N12 \u00b7 Aug 6" },
+  { name: "Hartley Jackson",     night: "N12 \u00b7 Aug 6" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
