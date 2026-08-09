@@ -148,11 +148,11 @@ const NIGHTS = [
     label: "N11 · Aug 2",
     venue: "Japan Tour",
     matches: [
-      { block: "B", a: "Shota Umino",     b: "Callum Newman",   winner: "Callum Newman",     method: "Forfeit" },
-      { block: "B", a: "Zack Sabre Jr",   b: "OSKAR",           winner: "Zack Sabre Jr", method:"Submission", time:"15:58" },
-      { block: "B", a: "Aaron Wolf",      b: "Drilla Moloney",  winner: "Aaron Wolf", method: "Angle Slame", time: " 13:11" },
-      { block: "B", a: "Yuya Uemura",     b: "Ren Narita",      winner: "Ren Narita", method:" Knee Bar",time:"20:00"  },
-      { block: "B", a: "Gabe Kidd",       b: "HENARE",          winner: "Gabe Kidd", method: "Leg Trap Piledriver", time:"20:35"  },
+      { block: "B", a: "Shota Umino",     b: "Callum Newman",   winner: "Callum Newman", method: "Forfeit" },
+      { block: "B", a: "Zack Sabre Jr",   b: "OSKAR",           winner: "Zack Sabre Jr", method:"Submission",           time:"15:58" },
+      { block: "B", a: "Aaron Wolf",      b: "Drilla Moloney",  winner: "Aaron Wolf",    method: "Angle Slame",         time: " 13:11" },
+      { block: "B", a: "Yuya Uemura",     b: "Ren Narita",      winner: "Ren Narita",    method:" Knee Bar",            time:"20:00"  },
+      { block: "B", a: "Gabe Kidd",       b: "HENARE",          winner: "Gabe Kidd",     method: "Leg Trap Piledriver", time:"20:35"  },
     ]
   },
   {
@@ -187,11 +187,12 @@ const NIGHTS = [
     label: "N14 · Aug 9",
     venue: "G Messe Gunma",
     matches: [
-      { block: "A", a: "Konosuke Takeshita", b: "SANADA",         winner: null },
-      { block: "A", a: "Hirooki Goto",       b: "Boltin Oleg",    winner: null },
-      { block: "A", a: "Yota Tsuji",         b: "Great-O-Khan",   winner: null },
-      { block: "A", a: "Shingo Takagi",      b: "Yuto-Ice",       winner: null },
-      { block: "A", a: "Jake Lee",           b: "Ryohei Oiwa",    winner: null },
+      { block: "A", a: "Jake Lee",           b: "Ryohei Oiwa",    winner: "Ryohei Oiwa",        method: "TM Clutch",    time: "12:47" },
+      { block: "A", a: "Konosuke Takeshita", b: "SANADA",         winner: "Konosuke Takeshita", method: "Raging Fire",  time: "14:02" },
+      { block: "A", a: "Yota Tsuji",         b: "Great-O-Khan",   winner: "Yota Tsuji",         method: "Fire Blaster", time: "13:14" },
+      { block: "A", a: "Hirooki Goto",       b: "Boltin Oleg",    winner: "Hirooki Goto",       method: "GTR",          time: "15:20" },
+      { block: "A", a: "Shingo Takagi",      b: "Yuto-Ice",       winner: "Yuto-Ice",           method: "Knee Strike",  time: "20:25" },
+      
     ]
   },
   {
@@ -298,6 +299,7 @@ const C_BLOCK_WINS = [
   { name: "Hartley Jackson",     night: "N13 \u00b7 Aug 8" },
   { name: "Jacob Austin Young",  night: "N13 \u00b7 Aug 8" }, 
   { name: "Taiji Ishimori",      night: "N13 \u00b7 Aud 8" },
+  { name: "Hartley Jackson",     night: "N14 \u00b7 Aug 9" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
