@@ -205,11 +205,7 @@ const NIGHTS = [
       { block: "B", a: "Zack Sabre Jr",   b: "HENARE",          winner: "Zack Sabre Jr",   method: "Referee stoppage (head and arm triangle)",time: "15:32" },
       { block: "B", a: "Drilla Moloney",  b: "Ren Narita",      winner: "Drilla Moloney", method: "Drilla Killa",                             time: "11:54" },
       { block: "B", a: "Aaron Wolf",      b: "Callum Newman",   winner: "Aaron Wolf",      method: "Head and Arm Triangle",                   time: "16:57" },
-      { block: "B", a: "Yuya Uemura",     b: "Gabe Kidd",       winner: "Yuya Uemura",     method: "Inside Cradle",                           time: "22:10" },
-      
-   
-     
-      
+      { block: "B", a: "Yuya Uemura",     b: "Gabe Kidd",       winner: "Yuya Uemura",     method: "Inside Cradle",                           time: "22:10" }, 
     ]
   },
   {
@@ -218,11 +214,11 @@ const NIGHTS = [
     label: "N16 · Aug 12",
     venue: "Act City Hamamatsu, Shizuoka",
     matches: [
-      { block: "A", a: "Hirooki Goto",       b: "Yuto-Ice",        winner: null },
-      { block: "A", a: "Boltin Oleg",        b: "Great-O-Khan",    winner: null },
-      { block: "A", a: "Yota Tsuji",         b: "Jake Lee",        winner: null },
-      { block: "A", a: "Shingo Takagi",      b: "SANADA",          winner: null },
-      { block: "A", a: "Konosuke Takeshita", b: "Ryohei Oiwa",     winner: null },
+      { block: "A", a: "Shingo Takagi",      b: "SANADA",          winner: "SANADA",       method: "O'Connor roll",    time: "12:18" },
+      { block: "A", a: "Hirooki Goto",       b: "Yuto-Ice",        winner: "Hirooki Goto", method: "Goto-Shiki",       time: "10:08" },
+      { block: "A", a: "Yota Tsuji",         b: "Jake Lee",        winner: "Yota Tsuji",   method: "Fire Blaster",     time: "13:58" },
+      { block: "A", a: "Boltin Oleg",        b: "Great-O-Khan",    winner: "Great-O-Khan", method: "Count Out",        time: "17:30" },
+      { block: "A", a: "Konosuke Takeshita", b: "Ryohei Oiwa",     winner: "Ryohei Oiwa",  method: "Lariat",           time: "15:11" },
     ]
   },
   {
@@ -244,8 +240,8 @@ const NIGHTS = [
     label: "N18 · Aug 15",
     venue: "Ryōgoku Sumo Hall, Tokyo",
     matches: [
-      { block: "SF", a: "A Block winner", b: "B Block runner-up", winner: null },
-      { block: "SF", a: "B Block winner", b: "A Block runner-up", winner: null },
+      { block: "SF", a: "Yota Tsuji", b: "B Block runner-up", winner: null },
+      { block: "SF", a: "B Block winner", b: "Ryohei Oiwa", winner: null },
     ]
   },
   {
@@ -305,6 +301,8 @@ const C_BLOCK_WINS = [
   { name: "Hartley Jackson",     night: "N14 \u00b7 Aug 9" },
   { name: "Jacob Austin Young",  night: "N15 \u00b7 Aug 11" }, 
   { name: "Taiji Ishimori",      night: "N15 \u00b7 Aud 11" },
+  { name: "Hartley Jackson",     night: "N16 \u00b7 Aug 12" },
+  { name: "Daiki Nagai",         night: "N16 \u00b7 Aug 12" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
