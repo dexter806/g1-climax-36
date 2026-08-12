@@ -72,9 +72,9 @@ const NIGHTS = [
     matches: [
       { block: "B", a: "Shota Umino",     b: "Ren Narita",      winner: "Ren Narita",     method:"Forfeit" },
       { block: "B", a: "Aaron Wolf",      b: "Gabe Kidd",       winner: "Gabe Kidd",      method:"Drill A Hole Piledriver",  time:"9:51"   },
-      { block: "B", a: "HENARE",          b: "OSKAR",           winner: "HENARE",         method:"Henare Bomb",              time:"11:46"  }, 
+      { block: "B", a: "HENARE",          b: "OSKAR",           winner: "HENARE",         method:"Henare Bomb",              time:"11:46"  },
       { block: "B", a: "Yuya Uemura",     b: "Drilla Moloney",  winner: "Drilla Moloney", method:"Drilla Killa",             time:"17:48"  },
-      { block: "B", a: "Zack Sabre Jr",   b: "Callum Newman",   winner: "Callum Newman",  method:"Rollup",                   time:"20:11"  },  
+      { block: "B", a: "Zack Sabre Jr",   b: "Callum Newman",   winner: "Callum Newman",  method:"Rollup",                   time:"20:11"  },
     ]
   },
   {
@@ -175,7 +175,7 @@ const NIGHTS = [
     venue: "Yokohama Budokan, Kanagawa",
     matches: [
       { block: "B", a: "Shota Umino",     b: "Gabe Kidd",       winner: "Gabe Kidd",     method: "Forfeit" },
-      { block: "B", a: "Drilla Moloney",  b: "Zack Sabre Jr",   winner: "Zack Sabre Jr", mehtod: "Pin",            time: "18:29" },
+      { block: "B", a: "Drilla Moloney",  b: "Zack Sabre Jr",   winner: "Zack Sabre Jr", method: "Pin",            time: "18:29" },
       { block: "B", a: "Yuya Uemura",     b: "HENARE",          winner: "Yuya Uemura",   method: "Lion's Shiner",  time: "15:06" },
       { block: "B", a: "Aaron Wolf",      b: "Ren Narita",      winner: "Ren Narita",    method: "Cross Kneebar",  time: "14:01" },
       { block: "B", a: "OSKAR",           b: "Callum Newman",   winner: "Callum Newman", method: "Pin",            time: "18:18"},
@@ -192,7 +192,6 @@ const NIGHTS = [
       { block: "A", a: "Yota Tsuji",         b: "Great-O-Khan",   winner: "Yota Tsuji",         method: "Fire Blaster", time: "13:14" },
       { block: "A", a: "Hirooki Goto",       b: "Boltin Oleg",    winner: "Hirooki Goto",       method: "GTR",          time: "15:20" },
       { block: "A", a: "Shingo Takagi",      b: "Yuto-Ice",       winner: "Yuto-Ice",           method: "Knee Strike",  time: "20:25" },
-      
     ]
   },
   {
@@ -205,7 +204,7 @@ const NIGHTS = [
       { block: "B", a: "Zack Sabre Jr",   b: "HENARE",          winner: "Zack Sabre Jr",   method: "Referee stoppage (head and arm triangle)",time: "15:32" },
       { block: "B", a: "Drilla Moloney",  b: "Ren Narita",      winner: "Drilla Moloney", method: "Drilla Killa",                             time: "11:54" },
       { block: "B", a: "Aaron Wolf",      b: "Callum Newman",   winner: "Aaron Wolf",      method: "Head and Arm Triangle",                   time: "16:57" },
-      { block: "B", a: "Yuya Uemura",     b: "Gabe Kidd",       winner: "Yuya Uemura",     method: "Inside Cradle",                           time: "22:10" }, 
+      { block: "B", a: "Yuya Uemura",     b: "Gabe Kidd",       winner: "Yuya Uemura",     method: "Inside Cradle",                           time: "22:10" },
     ]
   },
   {
@@ -270,39 +269,39 @@ const OUT_WRESTLERS = ["Shota Umino"];
    whenever someone notable picks one up.
    ============================================ */
 const C_BLOCK_WINS = [
-  { name: "Hartley Jackson",     night: "N2 \u00b7 Jul 18" },
-  { name: "Hartley Jackson",     night: "N3 \u00b7 Jul 19" },
-  { name: "Taiji Ishimori",      night: "N3 \u00b7 Jul 19" },
-  { name: "Hartley Jackson",     night: "N4 \u00b7 Jul 21" },
-  { name: "Jacob Austin Young",  night: "N4 \u00b7 Jul 21" },
-  { name: "Jacob Austin Young",  night: "N5 \u00b7 Jul 22" },
-  { name: "Toru Yano",           night: "N5 \u00b7 Jul 22" },
-  { name: "Hartley Jackson",     night: "N5 \u00b7 Jul 22" },
-  { name: "Taiji Ishimori",      night: "N5 \u00b7 Jul 22" },
-  { name: "Hartley Jackson",     night: "N7 \u00b7 Jul 26" },
-  { name: "Taiji Ishimori",      night: "N7 \u00b7 Jul 26" },
-  { name: "Hartley Jackson",     night: "N8 \u00b7 Jul 28" },
-  { name: "Jacob Austin Young",  night: "N8 \u00b7 Jul 28" },
-  { name: "Toru Yano",           night: "N9 \u00b7 Jul 31" },
-  { name: "Kanemaru",            night: "N9 \u00b7 Jul 31" },
-  { name: "Hartley Jackson",     night: "N9 \u00b7 Jul 31" },
-  { name: "Jacob Austin Young",  night: "N9 \u00b7 Jul 31" },
-  { name: "Hartley Jackson",     night: "N10 \u00b7 Aug 1" },
-  { name: "Daiki Nagai",         night: "N10 \u00b7 Aug 1" },
-  { name: "Toru Yano",           night: "N11 \u00b7 Aug 2" },
-  { name: "Kanemaru",            night: "N11 \u00b7 Aug 2" },
-  { name: "Hartley Jackson",     night: "N11 \u00b7 Aug 2" },
-  { name: "Jacob Austin Young",  night: "N12 \u00b7 Aug 6" },
-  { name: "Zane Jay",            night: "N12 \u00b7 Aug 6" },
-  { name: "Hartley Jackson",     night: "N12 \u00b7 Aug 6" },
-  { name: "Hartley Jackson",     night: "N13 \u00b7 Aug 8" },
-  { name: "Jacob Austin Young",  night: "N13 \u00b7 Aug 8" }, 
-  { name: "Taiji Ishimori",      night: "N13 \u00b7 Aud 8" },
-  { name: "Hartley Jackson",     night: "N14 \u00b7 Aug 9" },
-  { name: "Jacob Austin Young",  night: "N15 \u00b7 Aug 11" }, 
-  { name: "Taiji Ishimori",      night: "N15 \u00b7 Aud 11" },
-  { name: "Hartley Jackson",     night: "N16 \u00b7 Aug 12" },
-  { name: "Daiki Nagai",         night: "N16 \u00b7 Aug 12" },
+  { name: "Hartley Jackson",     night: "N2 · Jul 18" },
+  { name: "Hartley Jackson",     night: "N3 · Jul 19" },
+  { name: "Taiji Ishimori",      night: "N3 · Jul 19" },
+  { name: "Hartley Jackson",     night: "N4 · Jul 21" },
+  { name: "Jacob Austin Young",  night: "N4 · Jul 21" },
+  { name: "Jacob Austin Young",  night: "N5 · Jul 22" },
+  { name: "Toru Yano",           night: "N5 · Jul 22" },
+  { name: "Hartley Jackson",     night: "N5 · Jul 22" },
+  { name: "Taiji Ishimori",      night: "N5 · Jul 22" },
+  { name: "Hartley Jackson",     night: "N7 · Jul 26" },
+  { name: "Taiji Ishimori",      night: "N7 · Jul 26" },
+  { name: "Hartley Jackson",     night: "N8 · Jul 28" },
+  { name: "Jacob Austin Young",  night: "N8 · Jul 28" },
+  { name: "Toru Yano",           night: "N9 · Jul 31" },
+  { name: "Kanemaru",            night: "N9 · Jul 31" },
+  { name: "Hartley Jackson",     night: "N9 · Jul 31" },
+  { name: "Jacob Austin Young",  night: "N9 · Jul 31" },
+  { name: "Hartley Jackson",     night: "N10 · Aug 1" },
+  { name: "Daiki Nagai",         night: "N10 · Aug 1" },
+  { name: "Toru Yano",           night: "N11 · Aug 2" },
+  { name: "Kanemaru",            night: "N11 · Aug 2" },
+  { name: "Hartley Jackson",     night: "N11 · Aug 2" },
+  { name: "Jacob Austin Young",  night: "N12 · Aug 6" },
+  { name: "Zane Jay",            night: "N12 · Aug 6" },
+  { name: "Hartley Jackson",     night: "N12 · Aug 6" },
+  { name: "Hartley Jackson",     night: "N13 · Aug 8" },
+  { name: "Jacob Austin Young",  night: "N13 · Aug 8" },
+  { name: "Taiji Ishimori",      night: "N13 · Aug 8" },
+  { name: "Hartley Jackson",     night: "N14 · Aug 9" },
+  { name: "Jacob Austin Young",  night: "N15 · Aug 11" },
+  { name: "Taiji Ishimori",      night: "N15 · Aug 11" },
+  { name: "Hartley Jackson",     night: "N16 · Aug 12" },
+  { name: "Daiki Nagai",         night: "N16 · Aug 12" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
@@ -461,6 +460,8 @@ function computeStandings(block){
   const table = {};
   names.forEach(n => table[n] = { name:n, w:0, l:0, d:0, pts:0 });
 
+  const headToHead = {}; // headToHead[winnerName][loserName] = true
+
   NIGHTS.forEach(night => {
     night.matches.forEach(m => {
       if(m.block !== block || !m.winner) return;
@@ -471,11 +472,37 @@ function computeStandings(block){
         const loser = m.winner === m.a ? m.b : m.a;
         table[m.winner].w++; table[m.winner].pts += 2;
         table[loser].l++;
+        if(!headToHead[m.winner]) headToHead[m.winner] = {};
+        headToHead[m.winner][loser] = true;
       }
     });
   });
 
-  return Object.values(table).sort((x,y) => y.pts - x.pts);
+  const rows = Object.values(table);
+  rows.sort((x, y) => y.pts - x.pts);
+
+  // Break ties within each equal-points group using head-to-head results
+  // among just that tied group — matches NJPW's own tiebreak rule.
+  let i = 0;
+  while(i < rows.length){
+    let j = i + 1;
+    while(j < rows.length && rows[j].pts === rows[i].pts) j++;
+    if(j - i > 1){
+      const group = rows.slice(i, j);
+      group.sort((x, y) => {
+        const xBeatY = headToHead[x.name]?.[y.name];
+        const yBeatX = headToHead[y.name]?.[x.name];
+        if(xBeatY && !yBeatX) return -1;
+        if(yBeatX && !xBeatY) return 1;
+        // still tied (haven't wrestled yet, or a 3-way cycle) — leave as-is
+        return 0;
+      });
+      for(let k = i; k < j; k++) rows[k] = group[k - i];
+    }
+    i = j;
+  }
+
+  return rows;
 }
 
 /* Looks up a wrestler's current W-L-D / points in their block.
