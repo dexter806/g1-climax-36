@@ -227,10 +227,10 @@ const NIGHTS = [
     venue: "Korakuen Hall, Tokyo",
     matches: [
       { block: "B", a: "Shota Umino",     b: "Drilla Moloney",  winner: "Drilla Moloney",     method: "Forfeit"  },
-      { block: "B", a: "Callum Newman",   b: "HENARE",          winner: null },
-      { block: "B", a: "Gabe Kidd",       b: "Ren Narita",      winner: null },
-      { block: "B", a: "Zack Sabre Jr",   b: "Aaron Wolf",      winner: null },
-      { block: "B", a: "Yuya Uemura",     b: "OSKAR",           winner: null },
+      { block: "B", a: "Zack Sabre Jr",   b: "Aaron Wolf",      winner: "Zack Sabre Jr",      method: "Pin",                     time: "15:44" },
+      { block: "B", a: "Gabe Kidd",       b: "Ren Narita",      winner: "Gabe Kidd",          method: "Drill a Hole Piledriver", time: "2:11" },
+      { block: "B", a: "Yuya Uemura",     b: "OSKAR",           winner: "Yuya Uemura",        method: "Armbar",                  time: "17:25" },
+      { block: "B", a: "Callum Newman",   b: "HENARE",          winner: "Callum Newman",      method: "Make Way",                time: "23:04" },
     ]
   },
   {
@@ -302,6 +302,8 @@ const C_BLOCK_WINS = [
   { name: "Taiji Ishimori",      night: "N15 · Aug 11" },
   { name: "Hartley Jackson",     night: "N16 · Aug 12" },
   { name: "Daiki Nagai",         night: "N16 · Aug 12" },
+  { name: "Hartley Jackson",     night: "N17 · Aug 13" },
+  { name: "SHO",                 night: "N17 · Aug 13" },
 ];
 
 /* Generates a simple original avatar for each wrestler: a silhouette
