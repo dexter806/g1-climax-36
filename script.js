@@ -239,8 +239,8 @@ const NIGHTS = [
     label: "N18 · Aug 15",
     venue: "Ryōgoku Sumo Hall, Tokyo",
     matches: [
-      { block: "SF", a: "Yota Tsuji", b: "B Block runner-up", winner: null },
-      { block: "SF", a: "B Block winner", b: "Ryohei Oiwa", winner: null },
+      { block: "SF", a: "Yota Tsuji",    b: "Yuya Uemura",       winner: null },
+      { block: "SF", a: "Callum Newman", b: "Ryohei Oiwa",       winner: null },
     ]
   },
   {
