@@ -7,7 +7,16 @@
    ============================================ */
 
 const NIGHTS = [
-  {
+ {
+    id: "night19",
+    date: "2026-08-16T08:00:00Z",
+    label: "N19 · Aug 16 — FINAL",
+    venue: "Ryōgoku Sumo Hall, Tokyo",
+    matches: [
+      { block: "F", a: "Yuya Uemura", b: "Ryohei Oiwa", winner: null },
+    ]
+  },
+ {
     id: "night1",
     date: "2026-07-11T23:00:00Z",
     label: "N1 · Jul 11",
@@ -243,15 +252,7 @@ const NIGHTS = [
       { block: "SF", a: "Callum Newman", b: "Ryohei Oiwa",       winner: "Ryohei Oiwa", method: "The Grip", time: "18:44" },
     ]
   },
-  {
-    id: "night19",
-    date: "2026-08-16T08:00:00Z",
-    label: "N19 · Aug 16 — FINAL",
-    venue: "Ryōgoku Sumo Hall, Tokyo",
-    matches: [
-      { block: "F", a: "Yuya Uemura", b: "Ryohei Oiwa", winner: null },
-    ]
-  },
+ 
 ];
 
 const BLOCK_A = ["Konosuke Takeshita","Yota Tsuji","Hirooki Goto","SANADA","Shingo Takagi","Jake Lee","Yuto-Ice","Great-O-Khan","Boltin Oleg","Ryohei Oiwa"];
