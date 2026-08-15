@@ -239,8 +239,8 @@ const NIGHTS = [
     label: "N18 · Aug 15",
     venue: "Ryōgoku Sumo Hall, Tokyo",
     matches: [
-      { block: "SF", a: "Yota Tsuji",    b: "Yuya Uemura",       winner: null },
-      { block: "SF", a: "Callum Newman", b: "Ryohei Oiwa",       winner: null },
+      { block: "SF", a: "Yota Tsuji",    b: "Yuya Uemura",       winner: "Yuya Uemura", method: "Deadbolt Suplex", time: "25:10" },
+      { block: "SF", a: "Callum Newman", b: "Ryohei Oiwa",       winner: "Ryohei Oiwa", method: "The Grip", time: "18:44" },
     ]
   },
   {
@@ -249,7 +249,7 @@ const NIGHTS = [
     label: "N19 · Aug 16 — FINAL",
     venue: "Ryōgoku Sumo Hall, Tokyo",
     matches: [
-      { block: "F", a: "Semifinal 1 winner", b: "Semifinal 2 winner", winner: null },
+      { block: "F", a: "Yuya Uemura", b: "Ryohei Oiwa", winner: null },
     ]
   },
 ];
@@ -304,7 +304,12 @@ const C_BLOCK_WINS = [
   { name: "Daiki Nagai",         night: "N16 · Aug 12" },
   { name: "Hartley Jackson",     night: "N17 · Aug 13" },
   { name: "SHO",                 night: "N17 · Aug 13" },
+  { name: "Francesco Akira",     night: "N18 · Aug 15" },
+  { name: "Wheeler Yuta",        night: "N18 · Aug 15" },
+  { name: "Toru Yano",           night: "N18 · Aug 15" },
+  { name: "Kosei Fujita",        night: "N18 · Aug 15" },
 ];
+
 
 /* Generates a simple original avatar for each wrestler: a silhouette
    bust with their initials, colored by block. No external image files,
