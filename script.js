@@ -13,7 +13,7 @@ const NIGHTS = [
     label: "N19 · Aug 16 — FINAL",
     venue: "Ryōgoku Sumo Hall, Tokyo",
     matches: [
-      { block: "F", a: "Yuya Uemura", b: "Ryohei Oiwa", winner: null },
+      { block: "F", a: "Yuya Uemura", b: "Ryohei Oiwa", winner: "Ryohei Oiwa", method: "Big Rock", time: "35:10" },
     ]
   },
  {
