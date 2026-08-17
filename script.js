@@ -908,7 +908,37 @@ function updateNextCard(){
   cdEl.textContent = formatCountdown(new Date(next.date) - now);
 }
 
+/* ============================================
+   WINNER BANNER
+   Shows once per browser (tracked via localStorage).
+   To make it show every visit instead, just delete
+   the two localStorage lines below.
+   ============================================ */
+const WINNER_BANNER_KEY = "g1-tracker-winner-banner-seen";
+
+function initWinnerBanner(){
+  const banner = document.getElementById("winnerBanner");
+  if(!banner) return;
+  if(localStorage.getItem(WINNER_BANNER_KEY)) { banner.remove(); return; }
+
+  requestAnimationFrame(() => banner.classList.add("visible"));
+
+  let dismissed = false;
+  function dismiss(){
+    if(dismissed) return;
+    dismissed = true;
+    banner.classList.remove("visible");
+    localStorage.setItem(WINNER_BANNER_KEY, "1");
+    setTimeout(() => banner.remove(), 600);
+  }
+
+  document.getElementById("winnerDismiss").addEventListener("click", dismiss);
+  banner.addEventListener("click", (e) => { if(e.target === banner) dismiss(); });
+  setTimeout(dismiss, 5000);
+}
+
 render();
 updateNextCard();
 setInterval(updateNextCard, 1000);
 loadRatingsFromServer();
+initWinnerBanner();
