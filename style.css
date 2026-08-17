@@ -545,3 +545,107 @@ main{ max-width: 1080px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; }
 @media (prefers-reduced-motion: reduce){
   .star-front{ transition: none; }
 }
+
+/* ============================================
+   WINNER BANNER — celebratory splash on load
+   ============================================ */
+.winner-banner{
+  position: fixed; inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, rgba(232,255,41,0.10), rgba(11,10,13,0.96) 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+.winner-banner.visible{ opacity: 1; pointer-events: auto; }
+
+.winner-banner-inner{
+  position: relative;
+  text-align: center;
+  max-width: 380px;
+  padding: 2.5rem 2rem;
+  transform: scale(0.92);
+  transition: transform 0.5s cubic-bezier(.34,1.56,.64,1);
+}
+.winner-banner.visible .winner-banner-inner{ transform: scale(1); }
+
+.winner-trophy{
+  width: 84px;
+  margin: 0 auto 0.8rem;
+  display: block;
+  filter: drop-shadow(0 6px 16px rgba(232,255,41,0.35));
+}
+
+.winner-photo-wrap{
+  width: 140px; height: 168px;
+  margin: 0 auto 1.2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--flash);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.6), 0 0 0 6px rgba(232,255,41,0.12);
+}
+.winner-photo-wrap img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.winner-eyebrow{
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--flash);
+  margin: 0 0 0.3rem;
+}
+.winner-name{
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  margin: 0;
+  color: var(--paper);
+  line-height: 1;
+}
+
+.winner-dismiss{
+  position: absolute;
+  top: -0.5rem; right: -0.5rem;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--paper);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.winner-dismiss:hover{ background: rgba(255,255,255,0.16); }
+
+.winner-confetti{ position: absolute; inset: 0; pointer-events: none; }
+.winner-confetti span{
+  position: absolute;
+  top: -10%;
+  width: 8px; height: 14px;
+  opacity: 0.9;
+  animation: confettiFall 3.2s linear infinite;
+}
+.winner-confetti span:nth-child(1){ left:5%;  background: var(--flash);      animation-delay: 0s; }
+.winner-confetti span:nth-child(2){ left:15%; background: var(--vermillion); animation-delay: 0.3s; }
+.winner-confetti span:nth-child(3){ left:25%; background: var(--cyan);       animation-delay: 0.6s; }
+.winner-confetti span:nth-child(4){ left:35%; background: var(--flash);      animation-delay: 0.9s; }
+.winner-confetti span:nth-child(5){ left:45%; background: var(--vermillion); animation-delay: 0.2s; }
+.winner-confetti span:nth-child(6){ left:55%; background: var(--cyan);       animation-delay: 0.5s; }
+.winner-confetti span:nth-child(7){ left:65%; background: var(--flash);      animation-delay: 0.8s; }
+.winner-confetti span:nth-child(8){ left:75%; background: var(--vermillion); animation-delay: 0.1s; }
+.winner-confetti span:nth-child(9){ left:85%; background: var(--cyan);       animation-delay: 0.4s; }
+.winner-confetti span:nth-child(10){ left:95%; background: var(--flash);      animation-delay: 0.7s; }
+.winner-confetti span:nth-child(11){ left:10%; background: var(--cyan);       animation-delay: 1s; }
+.winner-confetti span:nth-child(12){ left:90%; background: var(--vermillion); animation-delay: 1.3s; }
+
+@keyframes confettiFall{
+  0%{ transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100%{ transform: translateY(110vh) rotate(360deg); opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .winner-confetti span{ animation: none; display: none; }
+  .winner-banner, .winner-banner-inner{ transition: none; }
+}
