@@ -7,8 +7,41 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+  <div class="winner-banner" id="winnerBanner">
+    <div class="winner-confetti" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="winner-banner-inner">
+      <button class="winner-dismiss" id="winnerDismiss" aria-label="Close">&times;</button>
+      <svg class="winner-trophy" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="trophyGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFF3B0"/>
+            <stop offset="50%" stop-color="#E8FF29"/>
+            <stop offset="100%" stop-color="#C9A227"/>
+          </linearGradient>
+        </defs>
+        <path d="M25 30 C5 30 5 60 25 62" stroke="url(#trophyGold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M95 30 C115 30 115 60 95 62" stroke="url(#trophyGold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M25 20 H95 V45 C95 70 78 85 60 85 C42 85 25 70 25 45 Z" fill="url(#trophyGold)"/>
+        <rect x="53" y="85" width="14" height="20" fill="url(#trophyGold)"/>
+        <rect x="35" y="105" width="50" height="10" rx="2" fill="url(#trophyGold)"/>
+        <rect x="25" y="115" width="70" height="12" rx="3" fill="url(#trophyGold)"/>
+      </svg>
+      <div class="winner-photo-wrap">
+        <img src="images/Oiwa.png" alt="Ryohei Oiwa" onerror="this.parentElement.style.display='none'">
+      </div>
+      <p class="winner-eyebrow">G1 CLIMAX 36 CHAMPION</p>
+      <h2 class="winner-name">Ryohei Oiwa</h2>
+    </div>
+  </div>
   <div class="brand-stripe"></div>
   <header class="masthead">
     <div class="masthead-inner">
@@ -47,42 +80,3 @@
           </tr></thead><tbody></tbody></table>
         </div>
         <div class="block-table" id="blockB">
-          <h2 class="block-title block-b">BLOCK B</h2>
-          <table><thead><tr>
-            <th class="col-name">Wrestler</th><th>W</th><th>L</th><th>D</th><th>PTS</th>
-          </tr></thead><tbody></tbody></table>
-        </div>
-      </div>
-      <div class="c-block">
-        <h2 class="block-title c-block-title">C BLOCK <span class="c-block-sub">— unofficial undercard win counter, no points</span></h2>
-        <table><thead><tr>
-          <th class="col-name">Wrestler</th><th>Wins</th>
-        </tr></thead><tbody id="cBlockBody"></tbody></table>
-      </div>
-    </section>
-    <section id="view-stars" class="view">
-      <p class="stars-intro">Rate matches from the CARDS tab. Your top 10 rated matches, and how each wrestler ranks per block based on the matches you've rated.</p>
-      <div class="stars-wrap">
-        <div class="stars-col">
-          <h2 class="stars-heading">YOUR TOP 10</h2>
-          <div class="star-leaderboard" id="myLeaderboard"></div>
-        </div>
-        <div class="stars-col">
-          <h2 class="stars-heading stars-heading-a">BLOCK A WRESTLERS</h2>
-          <div class="star-leaderboard" id="wrestlerA"></div>
-        </div>
-        <div class="stars-col">
-          <h2 class="stars-heading stars-heading-b">BLOCK B WRESTLERS</h2>
-          <div class="star-leaderboard" id="wrestlerB"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <div class="spotlight left" id="spotlightLeft"></div>
-  <div class="spotlight right" id="spotlightRight"></div>
-  <footer class="site-footer">
-    <p>Built for learning &amp; personal use. Results sourced from public wrestling reporting. Not affiliated with New Japan Pro Wrestling.</p>
-  </footer>
-<script src="script.js"></script>
-</body>
-</html>
